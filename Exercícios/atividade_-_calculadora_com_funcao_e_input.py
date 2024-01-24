@@ -26,10 +26,13 @@ def calculadora():
      
     while True:
         try: 
-            numero1 = float(input('Digite um número: '))
-            numero2 = float(input('Digite outro número: '))
             print('[1] Soma | [2] Subtração | [3] Multiplicação | [4] Divisão | [0] Sair')
             operacao = int(input('Escolha uma opção: '))
+            if operacao == 0:
+                print('Finalizando a calculadora...')
+                break
+            numero1 = float(input('Digite um número: '))
+            numero2 = float(input('Digite outro número: '))
             
             if operacao == 1:
                 print(f'{numero1} + {numero2} = {numero1+numero2}')
@@ -47,11 +50,10 @@ def calculadora():
             elif operacao == 4:
                 print(f'{numero1} / {numero2} = {numero1/numero2}')
                 print('CALCULADORA')
-
-            elif operacao == 0:
-                print('Finalizando a calculadora...')
-                break
                 
+            else: 
+                print('Essa opção não existe!')
+
         except:
             print('Operação inválida!')
             print('CALCULADORA')
