@@ -1,14 +1,5 @@
-# ATIVIDADE FEITA COM 'while'
-contador = 20
-while (contador > 0):
-  if contador == 13:
-    print('Andar inexistente!')
-    contador -= 1
-    continue
-  elif contador == 15:
-    print('Andar inexistente!')
-    contador -= 1
-    continue
-
-  print(f'{contador}º andar.')
-  contador -= 1
+n = int(input('Digite um número: '))
+fat = 1
+for i in range(1, n + 1):
+    fat *= i
+print(f'{n}! = {fat}')
